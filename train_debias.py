@@ -74,7 +74,7 @@ def parse_args():
     parser.add_argument('--optimizer', type=str, default='Adam', help='optimizer for training')
     parser.add_argument('--log_dir', type=str, default=None, help='experiment root')
     parser.add_argument('--decay_rate', type=float, default=1e-4, help='decay rate')
-    parser.add_argument('--use_normals', action='store_true', default=False, help='use normals')
+    parser.add_argument('--use_colors', action='store_true', default=False, help='use normals')
     parser.add_argument('--process_data', action='store_true', default=False, help='save data offline')
     parser.add_argument('--use_uniform_sample', action='store_true', default=False, help='use uniform sampiling')
     parser.add_argument('--local_rank', default=-1, type=int,
@@ -214,7 +214,7 @@ def main(args):
     shutil.copy('models/pointnet2_utils.py', str(exp_dir))
     shutil.copy('./train_classification.py', str(exp_dir))
 
-    classifier = convert_syncbn_model(model.get_model(num_class, normal_channel=args.use_normals)).cuda(args.local_rank)
+    classifier = convert_syncbn_model(model.get_model(num_class, normal_channel=args.use_colors)).cuda(args.local_rank)
     criterion = model.get_loss().cuda(args.local_rank)
     classifier.apply(inplace_relu)
     # print(classifier)
