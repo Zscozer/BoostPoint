@@ -1,0 +1,989 @@
+(zhouhonggu) zyk@zyk-hdu-pc:~/WORKSPACE/zhou_honggong/Relation-Shape-CNN-master$ python voting_evaluate_cls_objNN.py
+voting_evaluate_cls_objNN.py:90: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if args.checkpoint is not '':
+Load processed data from /home/zyk/WORKSPACE/zhou_honggong/ScanObjectNN/object_only_with_color/ScanObj_OBJONLY_test_2048pts_fps.dat...
+Load model successfully: ./cls/ScanObjectNN/cls_msg_iter_16380_acc_0.881647_seed_110_with_color_model_2048.pth
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat   1       mean Acc: 76.086873     Acc: 81.132075
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat   2       mean Acc: 77.700202     Acc: 80.960549
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+^CTraceback (most recent call last):
+  File "voting_evaluate_cls_objNN.py", line 143, in <module>
+    main()
+  File "voting_evaluate_cls_objNN.py", line 118, in main
+    pred += F.softmax(model(new_points.transpose(2,1))[0], dim = 1)
+  File "/home/zyk/miniconda3/envs/zhouhonggu/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/zyk/WORKSPACE/zhou_honggong/Relation-Shape-CNN-master/models/pointnet2_img_cls_msg_vote.py", line 74, in forward
+    l1_xyz, l1_points = self.sa1(xyz, norm)
+  File "/home/zyk/miniconda3/envs/zhouhonggu/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/zyk/WORKSPACE/zhou_honggong/Relation-Shape-CNN-master/models/pointnet2_utils_msg_vote.py", line 422, in forward
+    new_xyz = index_points(xyz, farthest_point_sample(xyz, S))
+  File "/home/zyk/WORKSPACE/zhou_honggong/Relation-Shape-CNN-master/models/pointnet2_utils_msg_vote.py", line 171, in farthest_point_sample
+    distance[mask] = dist[mask]
+KeyboardInterrupt
+
+(zhouhonggu) zyk@zyk-hdu-pc:~/WORKSPACE/zhou_honggong/Relation-Shape-CNN-master$ python voting_evaluate_cls_objNN.py
+voting_evaluate_cls_objNN.py:90: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if args.checkpoint is not '':
+Load processed data from /home/zyk/WORKSPACE/zhou_honggong/ScanObjectNN/object_only_with_color/ScanObj_OBJONLY_test_2048pts_fps.dat...
+Load model successfully: ./cls/ScanObjectNN/cls_msg_iter_16380_acc_0.881647_seed_110_with_color_model_2048.pth
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+^CTraceback (most recent call last):
+  File "voting_evaluate_cls_objNN.py", line 142, in <module>
+    main()
+  File "voting_evaluate_cls_objNN.py", line 117, in main
+    pred += F.softmax(model(new_points.transpose(2,1))[0], dim = 1)
+  File "/home/zyk/miniconda3/envs/zhouhonggu/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/zyk/WORKSPACE/zhou_honggong/Relation-Shape-CNN-master/models/pointnet2_img_cls_msg_vote.py", line 74, in forward
+    l1_xyz, l1_points = self.sa1(xyz, norm)
+  File "/home/zyk/miniconda3/envs/zhouhonggu/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/zyk/WORKSPACE/zhou_honggong/Relation-Shape-CNN-master/models/pointnet2_utils_msg_vote.py", line 422, in forward
+    new_xyz = index_points(xyz, farthest_point_sample(xyz, S))
+  File "/home/zyk/WORKSPACE/zhou_honggong/Relation-Shape-CNN-master/models/pointnet2_utils_msg_vote.py", line 171, in farthest_point_sample
+    distance[mask] = dist[mask]
+KeyboardInterrupt
+
+(zhouhonggu) zyk@zyk-hdu-pc:~/WORKSPACE/zhou_honggong/Relation-Shape-CNN-master$ python voting_evaluate_cls_objNN.py
+voting_evaluate_cls_objNN.py:90: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if args.checkpoint is not '':
+Load processed data from /home/zyk/WORKSPACE/zhou_honggong/ScanObjectNN/object_only_with_color/ScanObj_OBJONLY_test_2048pts_fps.dat...
+Load model successfully: ./cls/ScanObjectNN/cls_msg_iter_16380_acc_0.881647_seed_110_with_color_model_2048.pth
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Traceback (most recent call last):
+  File "voting_evaluate_cls_objNN.py", line 142, in <module>
+    main()
+  File "voting_evaluate_cls_objNN.py", line 117, in main
+    pred += F.softmax(model(new_points.transpose(2,1))[0], dim = 1)
+  File "/home/zyk/miniconda3/envs/zhouhonggu/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/zyk/WORKSPACE/zhou_honggong/Relation-Shape-CNN-master/models/pointnet2_img_cls_msg_vote.py", line 74, in forward
+    l1_xyz, l1_points = self.sa1(xyz, norm)
+  File "/home/zyk/miniconda3/envs/zhouhonggu/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/zyk/WORKSPACE/zhou_honggong/Relation-Shape-CNN-master/models/pointnet2_utils_msg_vote.py", line 439, in forward
+    grouped_points =  F.relu(bn(conv(grouped_points)))
+  File "/home/zyk/miniconda3/envs/zhouhonggu/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1110, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/zyk/miniconda3/envs/zhouhonggu/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 168, in forward
+    return F.batch_norm(
+  File "/home/zyk/miniconda3/envs/zhouhonggu/lib/python3.8/site-packages/torch/nn/functional.py", line 2421, in batch_norm
+    return torch.batch_norm(
+RuntimeError: CUDA out of memory. Tried to allocate 128.00 MiB (GPU 0; 23.70 GiB total capacity; 21.22 GiB already allocated; 71.12 MiB free; 21.35 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+(zhouhonggu) zyk@zyk-hdu-pc:~/WORKSPACE/zhou_honggong/Relation-Shape-CNN-master$ python voting_evaluate_cls_objNN.py
+voting_evaluate_cls_objNN.py:90: SyntaxWarning: "is not" with a literal. Did you mean "!="?
+  if args.checkpoint is not '':
+Load processed data from /home/zyk/WORKSPACE/zhou_honggong/ScanObjectNN/object_only_with_color/ScanObj_OBJONLY_test_2048pts_fps.dat...
+Load model successfully: ./cls/ScanObjectNN/cls_msg_iter_16380_acc_0.881647_seed_110_with_color_model_2048.pth
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat   1       mean Acc: 83.517082     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat   2       mean Acc: 84.287587     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat   3       mean Acc: 83.968278     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat   4       mean Acc: 83.318281     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat   5       mean Acc: 82.553048     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat   6       mean Acc: 83.824436     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat   7       mean Acc: 83.853023     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat   8       mean Acc: 83.981662     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat   9       mean Acc: 83.441164     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  10       mean Acc: 83.734607     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  11       mean Acc: 82.984331     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  12       mean Acc: 83.928077     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  13       mean Acc: 85.155109     Acc: 88.164666
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  14       mean Acc: 83.148523     Acc: 86.449400
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  15       mean Acc: 84.096941     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  16       mean Acc: 84.444318     Acc: 87.993139
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  17       mean Acc: 83.153091     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  18       mean Acc: 83.092423     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  19       mean Acc: 84.217602     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  20       mean Acc: 84.148433     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  21       mean Acc: 84.557519     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  22       mean Acc: 82.929997     Acc: 86.449400
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  23       mean Acc: 83.944012     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  24       mean Acc: 83.194396     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  25       mean Acc: 82.899835     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  26       mean Acc: 82.567388     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  27       mean Acc: 83.292341     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  28       mean Acc: 83.148691     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  29       mean Acc: 83.498223     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  30       mean Acc: 82.660005     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  31       mean Acc: 83.767484     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  32       mean Acc: 82.828606     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  33       mean Acc: 84.315608     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  34       mean Acc: 82.941309     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  35       mean Acc: 83.832740     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  36       mean Acc: 83.996352     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  37       mean Acc: 82.273969     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  38       mean Acc: 84.427724     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  39       mean Acc: 84.193231     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  40       mean Acc: 84.226679     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  41       mean Acc: 84.272304     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  42       mean Acc: 84.303088     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  43       mean Acc: 83.620030     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  44       mean Acc: 84.218828     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  45       mean Acc: 82.945407     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  46       mean Acc: 81.531082     Acc: 86.106346
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  47       mean Acc: 83.693878     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  48       mean Acc: 84.192783     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  49       mean Acc: 83.138793     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  50       mean Acc: 84.456245     Acc: 87.993139
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  51       mean Acc: 84.800381     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  52       mean Acc: 83.242727     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  53       mean Acc: 84.021227     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  54       mean Acc: 82.994998     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  55       mean Acc: 84.024631     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  56       mean Acc: 82.920994     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  57       mean Acc: 84.290492     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  58       mean Acc: 83.881500     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  59       mean Acc: 82.706397     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  60       mean Acc: 84.203192     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  61       mean Acc: 84.067874     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  62       mean Acc: 84.504259     Acc: 87.993139
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  63       mean Acc: 82.893686     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  64       mean Acc: 84.485825     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  65       mean Acc: 83.877813     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  66       mean Acc: 84.036339     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  67       mean Acc: 83.613960     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  68       mean Acc: 84.110622     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  69       mean Acc: 84.420457     Acc: 87.993139
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  70       mean Acc: 84.090595     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  71       mean Acc: 83.367494     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  72       mean Acc: 83.158430     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  73       mean Acc: 83.427421     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  74       mean Acc: 82.956674     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  75       mean Acc: 84.818414     Acc: 88.164666
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  76       mean Acc: 84.316905     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  77       mean Acc: 83.269347     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  78       mean Acc: 83.531959     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  79       mean Acc: 83.850773     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  80       mean Acc: 83.447185     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  81       mean Acc: 83.808714     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  82       mean Acc: 83.033718     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  83       mean Acc: 83.901396     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  84       mean Acc: 83.495417     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  85       mean Acc: 85.248801     Acc: 88.336192
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  86       mean Acc: 84.615281     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  87       mean Acc: 83.733480     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  88       mean Acc: 82.505495     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  89       mean Acc: 84.024339     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  90       mean Acc: 82.404325     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  91       mean Acc: 84.608919     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  92       mean Acc: 83.405145     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  93       mean Acc: 83.226745     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  94       mean Acc: 84.034222     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  95       mean Acc: 84.482434     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  96       mean Acc: 82.885434     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  97       mean Acc: 83.701498     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  98       mean Acc: 83.983859     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat  99       mean Acc: 83.285220     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 100       mean Acc: 84.027087     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 101       mean Acc: 84.170138     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 102       mean Acc: 83.433425     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 103       mean Acc: 83.242468     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 104       mean Acc: 84.054665     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 105       mean Acc: 82.704473     Acc: 86.449400
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 106       mean Acc: 83.169389     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 107       mean Acc: 84.199578     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 108       mean Acc: 83.693481     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 109       mean Acc: 83.419726     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 110       mean Acc: 83.161193     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 111       mean Acc: 83.104146     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 112       mean Acc: 84.169026     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 113       mean Acc: 83.362238     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 114       mean Acc: 84.647395     Acc: 87.993139
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 115       mean Acc: 83.609895     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 116       mean Acc: 83.114135     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 117       mean Acc: 83.638689     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 118       mean Acc: 83.858422     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 119       mean Acc: 83.869839     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 120       mean Acc: 82.716283     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 121       mean Acc: 83.434113     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 122       mean Acc: 83.498398     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 123       mean Acc: 83.503255     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 124       mean Acc: 84.525546     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 125       mean Acc: 85.039570     Acc: 87.993139
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 126       mean Acc: 83.114857     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 127       mean Acc: 83.036081     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 128       mean Acc: 84.221024     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 129       mean Acc: 83.151884     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 130       mean Acc: 83.467293     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 131       mean Acc: 84.569469     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 132       mean Acc: 83.257058     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 133       mean Acc: 83.485401     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 134       mean Acc: 83.212325     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 135       mean Acc: 83.632002     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 136       mean Acc: 83.917882     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 137       mean Acc: 83.152394     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 138       mean Acc: 83.428709     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 139       mean Acc: 83.633365     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 140       mean Acc: 84.086755     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 141       mean Acc: 84.228571     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 142       mean Acc: 83.760651     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 143       mean Acc: 83.251782     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 144       mean Acc: 83.062752     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 145       mean Acc: 82.988678     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 146       mean Acc: 83.166484     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 147       mean Acc: 84.279722     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 148       mean Acc: 84.143291     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 149       mean Acc: 84.427592     Acc: 87.993139
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 150       mean Acc: 83.121987     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 151       mean Acc: 84.370668     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 152       mean Acc: 84.532190     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 153       mean Acc: 83.323965     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 154       mean Acc: 83.688760     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 155       mean Acc: 83.074801     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 156       mean Acc: 83.473367     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 157       mean Acc: 85.388291     Acc: 88.336192
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 158       mean Acc: 83.149512     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 159       mean Acc: 82.976762     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 160       mean Acc: 83.707340     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 161       mean Acc: 84.717215     Acc: 87.993139
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 162       mean Acc: 83.406517     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 163       mean Acc: 83.572457     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 164       mean Acc: 84.289794     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 165       mean Acc: 83.367665     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 166       mean Acc: 83.220105     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 167       mean Acc: 83.628414     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 168       mean Acc: 83.684592     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 169       mean Acc: 82.327275     Acc: 86.449400
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 170       mean Acc: 84.433679     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 171       mean Acc: 85.267886     Acc: 88.164666
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 172       mean Acc: 83.174056     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 173       mean Acc: 83.509324     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 174       mean Acc: 84.133130     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 175       mean Acc: 83.680811     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 176       mean Acc: 82.678122     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 177       mean Acc: 82.985811     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 178       mean Acc: 83.427676     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 179       mean Acc: 82.647829     Acc: 86.449400
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 180       mean Acc: 84.993631     Acc: 88.164666
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 181       mean Acc: 84.506405     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 182       mean Acc: 83.227576     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 183       mean Acc: 83.090491     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 184       mean Acc: 83.460611     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 185       mean Acc: 83.552991     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 186       mean Acc: 84.226689     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 187       mean Acc: 83.669705     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 188       mean Acc: 83.411445     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 189       mean Acc: 83.590184     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 190       mean Acc: 84.011691     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 191       mean Acc: 83.410318     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 192       mean Acc: 84.122401     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 193       mean Acc: 83.755464     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 194       mean Acc: 84.251607     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 195       mean Acc: 83.844303     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 196       mean Acc: 84.902160     Acc: 87.993139
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 197       mean Acc: 83.784828     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 198       mean Acc: 83.630026     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 199       mean Acc: 84.346619     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 200       mean Acc: 84.735120     Acc: 87.993139
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 201       mean Acc: 84.075726     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 202       mean Acc: 84.455296     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 203       mean Acc: 82.886580     Acc: 86.449400
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 204       mean Acc: 83.456989     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 205       mean Acc: 82.875800     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 206       mean Acc: 83.695122     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 207       mean Acc: 83.673506     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 208       mean Acc: 81.918099     Acc: 86.449400
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 209       mean Acc: 82.931416     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 210       mean Acc: 83.429822     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 211       mean Acc: 83.918971     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 212       mean Acc: 83.189558     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 213       mean Acc: 83.299712     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 214       mean Acc: 83.912672     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 215       mean Acc: 83.409866     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 216       mean Acc: 83.805974     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 217       mean Acc: 83.128013     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 218       mean Acc: 84.614946     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 219       mean Acc: 83.576192     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 220       mean Acc: 83.363260     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 221       mean Acc: 83.625513     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 222       mean Acc: 83.516968     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 223       mean Acc: 83.397751     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 224       mean Acc: 83.275148     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 225       mean Acc: 81.930516     Acc: 86.449400
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 226       mean Acc: 82.998482     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 227       mean Acc: 83.615583     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 228       mean Acc: 82.740850     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 229       mean Acc: 82.963167     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 230       mean Acc: 83.428822     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 231       mean Acc: 82.945940     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 232       mean Acc: 84.325355     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 233       mean Acc: 85.055590     Acc: 88.336192
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 234       mean Acc: 83.387178     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 235       mean Acc: 82.932335     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 236       mean Acc: 83.234512     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 237       mean Acc: 83.213079     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 238       mean Acc: 84.163895     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 239       mean Acc: 83.766603     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 240       mean Acc: 84.224483     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 241       mean Acc: 83.554495     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 242       mean Acc: 83.346047     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 243       mean Acc: 83.717375     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 244       mean Acc: 83.188276     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 245       mean Acc: 84.462733     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 246       mean Acc: 83.450661     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 247       mean Acc: 84.186346     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 248       mean Acc: 83.178523     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 249       mean Acc: 83.461747     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 250       mean Acc: 83.692783     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 251       mean Acc: 83.980073     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 252       mean Acc: 82.455641     Acc: 86.449400
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 253       mean Acc: 82.734772     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 254       mean Acc: 82.615106     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 255       mean Acc: 83.548238     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 256       mean Acc: 83.758770     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 257       mean Acc: 83.399684     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 258       mean Acc: 82.823337     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 259       mean Acc: 83.827963     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 260       mean Acc: 82.551681     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 261       mean Acc: 82.012012     Acc: 86.277873
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 262       mean Acc: 84.946894     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 263       mean Acc: 82.946596     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 264       mean Acc: 83.100360     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 265       mean Acc: 83.812453     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 266       mean Acc: 83.182588     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 267       mean Acc: 82.909191     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 268       mean Acc: 82.899331     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 269       mean Acc: 84.201498     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 270       mean Acc: 83.352622     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 271       mean Acc: 83.935566     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 272       mean Acc: 85.496271     Acc: 88.850772
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 273       mean Acc: 84.431401     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 274       mean Acc: 82.973362     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 275       mean Acc: 84.364467     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 276       mean Acc: 83.753257     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 277       mean Acc: 84.503589     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 278       mean Acc: 83.116931     Acc: 86.963979
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 279       mean Acc: 83.709382     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 280       mean Acc: 83.890832     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 281       mean Acc: 83.572991     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 282       mean Acc: 84.238936     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 283       mean Acc: 83.820070     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 284       mean Acc: 84.600658     Acc: 87.821612
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 285       mean Acc: 84.388531     Acc: 87.993139
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 286       mean Acc: 82.882925     Acc: 86.620926
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 287       mean Acc: 84.057141     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 288       mean Acc: 83.581017     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 289       mean Acc: 83.398264     Acc: 86.792453
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 290       mean Acc: 83.398308     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 291       mean Acc: 83.729820     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 292       mean Acc: 84.072533     Acc: 87.650086
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 293       mean Acc: 83.460200     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 294       mean Acc: 83.307101     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 295       mean Acc: 82.382925     Acc: 86.449400
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 296       mean Acc: 82.046889     Acc: 86.277873
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 297       mean Acc: 83.705421     Acc: 87.478559
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 298       mean Acc: 83.702644     Acc: 87.135506
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 299       mean Acc: 83.991692     Acc: 87.307033
+voting_evaluate_cls_objNN.py:106: UserWarning: volatile was removed and now has no effect. Use `with torch.no_grad():` instead.
+  points, target = Variable(points, volatile=True), Variable(target, volatile=True)
+Repeat 300       mean Acc: 82.836744     Acc: 86.792453
+
+Best voting mean acc: 85.496271         Best voting acc: 88.850772
+

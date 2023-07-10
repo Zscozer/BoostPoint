@@ -1,0 +1,5 @@
+from .ModelNet40Loader import ModelNet40Cls
+from .ShapeNetPartLoader import ShapeNetPart
+from .ScanObjectNNDataset import ScanObjectNN
+from .ScanObjectNNDataset import ScanObjectNN_hardest
+from .ScanObjectNNDataset import ScanObjectNN_color

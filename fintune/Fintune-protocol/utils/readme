@@ -1,0 +1,1 @@
+不使用pytorch_utils下的文件，使用Pointnet2_PyTorch-master/pointnet2_ops_lib作为pointnet2的工具包

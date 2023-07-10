@@ -1,0 +1,42 @@
+# for modelnet
+common:
+    workers: 4
+
+    num_points: 1024
+    num_classes: 15
+    batch_size: 6
+    seed: 110
+    
+    base_lr: 0.001
+    lr_clip: 0.00001
+    lr_decay: 0.7
+    decay_step: 21
+    epochs: 200
+
+    weight_decay: 0
+    bn_momentum: 0.9
+    bnm_clip: 0.01
+    bn_decay: 0.5
+    
+    evaluate: 1
+    val_freq_epoch: 0.5   # frequency in epoch for validation, can be decimal
+    print_freq_iter: 20   # frequency in iteration for printing infomation
+    
+    input_channels: 0     # feature channels except (x, y, z)
+    
+    # h_ij: 0  for 3D Euclidean distance (3D Ed),    channels = 1
+    #       1  for (3D Ed, x_i, x_j, x_j - x_i),     channels = 10
+    #       2  for (2D Ed, x'_i, x'_j, x'_j - x'_i), channels = 10,  x' indicates 2D coordinates
+    relation_prior: 1
+    # 或者 cls/ScanObjectNN/hard_model
+    # checkpoint: './cls/ScanObjectNN/hard_model/cls_ssg_iter_36312_acc_0.820611.pth'        # the  ssg model for hard_objNN
+    # checkpoint: './cls/ScanObjectNN/cls_ssg_iter_9756_acc_0.872633.pth'        # the ssg model for easy_objNN
+    # checkpoint: './cls/ScanObjectNN/cls_msg_iter_18308_acc_0.874355_seed_126_old_model.pth' # the msg model for easy_objNN
+    checkpoint: './cls/ScanObjectNN/cls_msg_iter_16380_acc_0.881647_seed_110_with_color_model_2048.pth' # the msg model for easy_objNN with color
+
+    save_path: cls
+    # 可替换
+    data_root: /home/zyk/WORKSPACE/zhou_honggong/ScanObjectNN/main_split_nobg
+    use_hard_model: False
+    use_pointnet2_msg: True
+    use_color: True
