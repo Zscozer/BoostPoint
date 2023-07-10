@@ -8,7 +8,7 @@ Firstly, you need to have the shapeNet rendered image data, and we obtain the re
 ## Pre-training
 
 ```
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python -m torch.distributed.launch --nproc_per_node=8 train_debias.py --log_dir your_log_dir --batch_size 576 --use_normals --epoch 200 --model choose_your_model
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python -m torch.distributed.launch --nproc_per_node=8 train_debias.py --log_dir your_log_dir --batch_size 576 --use_colors --epoch 200 --model choose_your_model
 
 ```
 
