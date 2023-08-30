@@ -17,4 +17,4 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python -m torch.distributed.launch --nproc_
 After pre-training the model, directly enter the finetune, enter the respective protocol, and load the checkpoints of the pre-trained model.
 
 ## Note
-Due to web upload restrictions, our dataset and all checkpoints will be released after acceptance.
+Due to webpage upload restrictions, our complete code of fine-tuning part , dataset, and all checkpoints will be released after being accepted.
